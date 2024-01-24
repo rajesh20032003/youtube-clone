@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube.com Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" 
+href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap"
+ rel="stylesheet">
+
+    <link rel="preconnect" 
+    href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+     href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css
+    2?family=Roboto:wght@400;500;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet"  href="HTML CSS COURSE/thumbnails/youtube.css">
+   
+    <style>
+     p {
+  font-family: Roboto, Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ body{
+  margin:0;
+  padding-top:80px;
+  padding-left:97px;
+  padding-right: 25px;
+  background-color: rgb(249, 249, 249) ;
+ }
+
+.thumbnail {
+  width: 100%;
+  
+}
+
+.search-bar {
+  display: block;
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+
+.profile-picture {
+  width: 35px;
+  border-radius: 50px;
+  
+}
+
+.thumbnail-row {
+  margin-bottom: 9px;
+  position: relative;
+}
+.video-infogrid{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+
+
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+    column-gap: 16px;
+    row-gap: 40px;
+
+}
+
+@media(max-width:750px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(minimum-width:1000px)
+{
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;;
+  }
+}
+
+.header{
+  height:55px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  background-color:white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(236, 236, 236);
+  z-index: 100;
+
+ 
+}
+
+.middle-section{
+  flex:1;
+  margin-left: 65px;
+  margin-right:35px;
+  display:flex;
+  align-items: center;
+}
+
+.left-section{
+  align-items: center;
+  display: flex;
+
+  
+}
+.right-section{
+
+  width: 180px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  
+}
+.hamburger{
+  height:25px;
+  margin-left: 25px;
+  margin-right: 20px;
+
+
+}
+.youtube{
+  height:20px;
+}
+.search{
+  height: 40px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
+
+
+}
+.voice{
+  height:40px;
+  width:40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(245, 245, 245);
+
+}
+
+.search-bar {
+  flex: 1;
+  height: 36px;
+  padding-left: 10px;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  width: 0;
+  position: relative;
+  
+}
+
+
+.search-bar::placeholder{
+  font-family:roboto,arial;
+  font-size:15px;
+}
+.search-icon{
+  height:25px;
+  margin-top:4px;
+
+}
+.voice-icon{
+ height: 24px;
+  margin-top: 4px;
+}
+.r{
+height:32px;
+border-radius: 20px;
+}
+.noti{
+height:24px;
+}
+.apps{
+  height:24px;
+}
+.upload{
+  height:24px; 
+}
+
+.sidebar{
+  position:fixed;
+  left:0;
+  bottom:0;
+  top:55px;
+  background-color:white;
+  width:72px;
+  z-index:200;
+  padding-top: 5px;
+ 
+    
+}
+.video-time{
+  font-family: roboto,arial;
+  font-size:12px;
+  font-weight:500;
+  padding-left:4px;
+  padding-right:4px;
+  padding-top:4px;
+  padding-bottom:4px;
+  background-color: black;
+  border-radius: 2px;
+  color:white;
+  position:absolute;
+  bottom:8px;
+  right:5px;
+}
+
+
+.home{
+height:24px;
+}
+.explore{
+height:24px;
+}
+.subscription{
+height:24px;
+}
+.original{
+  height:24px;
+}
+.music{
+height:24px;
+}
+.library{
+height:24px;
+}
+.notinumber{
+  position:relative;
+
+
+}
+.numnoti{
+  position:absolute;
+  top:-2px;
+  right:-5px;
+  background-color: rgb(187, 6, 6);
+  color:white;
+  font-family:roboto,arial;
+ 
+  font-size:10px;
+  padding-left:5px;
+  padding-right:5px;
+  padding-top:2px;
+  padding-bottom:2px;
+  border-radius: 10px;
+
+}
+.sidebar-link{
+  
+  height:74px;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.sidebar-link:hover{
+  background-color:rgb(243, 241, 241);
+}
+
+.sidebar-link,.div{
+  font-family:roboto,arial;
+  font-size:10px;
+}
+.sidebar-link,.img{
+  margin-bottom: 4px;
+}
+    </style>
+  </head>
+  <body>
+   <div class="header">
+    <div class="left-section">
+      <img class="hamburger"   src="hamburger-menu.svg">
+      <img class="youtube" src="youtube-logo.svg">
+    </div>
+
+
+    <div class="middle-section">
+      <input class="search-bar"
+      type="text" placeholder="Search">
+      <button class="search">
+        <img class="search-icon" src="search.svg">
+        
+      </button>
+      <button class="voice">
+        <img  class="voice-icon"
+           src="voice-search-icon.svg">
+          
+      </button>
+    </div>
+    <div class="right-section">
+      <img class="upload" src="upload.svg">
+      <img class="apps" src="youtube-apps.svg">
+    
+      <div class="notinumber">
+        <img class="noti" src="notifications.svg">
+      
+        <div class="numnoti">69</div>
+      </div>
+      <img class="r" src="r.jpg">
+    </div>
+   </div>
+
+
+   <div class="sidebar">
+<div class="sidebar-link">
+  <img class="home" src="home.svg">
+  <div>HOME</div>
+</div>
+
+<div class="sidebar-link">
+  <img class="explore"   src="explore.svg">
+  <div>Explore</div>
+</div>
+
+<div class="sidebar-link">
+  <img class="subscription" src="subscriptions.svg">
+  <div>Subscriptions</div>
+</div>
+
+<div class="sidebar-link">
+  <img class="original" src="originals.svg">
+  <div>originals</div>
+</div>
+
+<div class="sidebar-link">
+  <img class="music" src="youtube-music.svg">
+  <div>Youtube Music</div>
+</div>
+
+<div class="sidebar-link">
+  <img class="library" src="library.svg">
+  <div>Library</div>
+</div>
+
+   </div>
+   
+   
+
+
+
+
+   <div class="video-grid" >
+<div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail"
+         src="thumbnail-1.webp">
+         <div class="video-time">14.20</div>
+      </div>
+      
+      <div class="video-infogrid">
+        <div class="channel-picture">
+          <img class="profile-picture"
+           src="channel-1.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Talking Tech and AI
+             with Google CEO Sundar Pichai!
+          </p>
+          <p class="video-author">
+            Marques Brownlee
+          </p>
+          <p class="video-stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <div class="video-time">12.00</div>
+        <img class="thumbnail"
+         src="hqdefault.webp">
+      </div>
+      <div class="video-infogrid">
+        <div class="channel-picture">
+          <img class="profile-picture"
+           src="channels4_profile.jpg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            innale Njan - pradeepa,jawahar,visakha
+          </p>
+          <p class="video-author">
+            Varshni Nateshan
+          </p>
+          <p class="video-stats">
+            800 views &#183; 1 year ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <div class="video-time">9.13</div>
+        <img class="thumbnail"
+         src="thumbnail-3.webp">
+      </div>
+      
+      <div class="video-infogrid">
+        <div class="channel-picture">
+          <img class="profile-picture"
+           src="channel-3.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Crazy Tik Toks Taken 
+            Moments Before DISASTER
+         </p>
+          <p class="video-author">
+            SSSniperWolf
+          </p>
+          <p class="video-stats">
+            12M views · 1 year ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <div class="video-time">22.09</div>
+        <img class="thumbnail"
+         src="thumbnail-4.webp">
+      </div>
+      <div class="video-infogrid">
+        <div class="channel-picture">
+          <img class="profile-picture"
+           src="channel-4.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            The Simplest Math Problem
+             No One Can Solve - Collatz Conjecture
+          </p>
+          <p class="video-author">
+            Veritasium
+          </p>
+          <p class="video-stats">
+           18M views · 4 months ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <div class="video-time">11.17</div>
+        <img class="thumbnail"
+         src="thumbnail-5.webp">
+      </div>
+      
+      <div class="video-infogrid">
+        <div class="channel-picture">
+          <img class="profile-picture"
+           src="channel-5.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+           
+Kadane's Algorithm
+ to Maximum Sum Subarray Problem
+
+
+          </p>
+          <p class="video-author">
+            CS Dojo
+          </p>
+          <p class="video-stats">
+            519K views · 5 years ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <div class="video-time">19.59</div>
+        <img class="thumbnail"
+         src="thumbnail-6.webp">
+      </div>
+      <div class="video-infogrid">
+        <div class="channel-picture">
+          <img class="profile-picture"
+           src="channel-6.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+          
+Anything You Can Fit In The Circle I’ll Pay For
+          </p>
+          <p class="video-author">
+            MrBeast
+          </p>
+          <p class="video-stats">
+            141M views · 1 year ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <div class="video-time">10.13</div>
+        <img class="thumbnail"
+         src="thumbnail-7.webp">
+      </div>
+      <div class="video-infogrid">
+        <div class="channel-picture">
+          <img class="profile-picture"
+           src="channel-7.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+          
+            Why Planes Don't Fly Over Tibet
+          </p>
+          <p class="video-author">
+            RealLifeLore
+          </p>
+          <p class="video-stats">
+            6.6M views · 1 year ago
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <div class="video-time">7.12</div>
+        <img class="thumbnail"
+         src="thumbnail-8.webp">
+      </div>
+      <div class="video-infogrid">
+        <div class="channel-picture">
+          <img class="profile-picture"
+           src="channel-8.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+         Inside The World's Biggest Passenger Plane
+          </p>
+          <p class="video-author">
+            Tech Vision
+          </p>
+          <p class="video-stats">
+            3.7M views · 10 months ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <div class="video-time">19.59</div>
+        <img class="thumbnail"
+         src="thumbnail-6.webp">
+      </div>
+      <div class="video-infogrid">
+        <div class="channel-picture">
+          <img class="profile-picture"
+           src="channel-6.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+          
+Anything You Can Fit In The Circle I’ll Pay For
+          </p>
+          <p class="video-author">
+            MrBeast
+          </p>
+          <p class="video-stats">
+            141M views · 1 year ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
